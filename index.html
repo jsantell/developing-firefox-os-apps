@@ -13,6 +13,11 @@
 
 		<link rel="stylesheet" href="vendor/styles/reveal.css">
 		<link rel="stylesheet" href="css/theme.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			if (window.location.search.match(/print-pdf/gi))
+				document.write('<link rel="stylesheet" href="vendor/styles/pdf.css" type="text/css" media="print">');
+		</script>
 
 		<!--[if lt IE 9]>
 		<script src="vendor/scripts/html5shiv.js"></script>
@@ -127,8 +132,10 @@
 				</section>
 				<section>
 					<h1>App Types</h1>
-					<p>Hosted Apps</p>
-					<p>Packaged Apps</p>
+					<ul>
+						<li>Hosted Apps</li>
+						<li>Packaged Apps</li>
+					</ul>
 				</section>
 				<section>
 					<h1>Permissions</h1>
