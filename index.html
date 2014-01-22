@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Developing Open Web Apps for Firefox OS</title>
+
+		<meta name="description" content="Developing Open Web Apps for Firefox OS">
+		<meta name="author" content="Jordan Santell">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="vendor/styles/reveal.css">
+		<link rel="stylesheet" href="css/theme.css">
+
+		<!--[if lt IE 9]>
+		<script src="vendor/scripts/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background="images/firefoxos_swoop.jpg">
+					<h1>Developing Open Web Apps</h1>
+					<h2>With Firefox OS</h2>
+					<p>
+						<a href="http://jsantell.com">
+							Jordan Santell
+						</a> /
+						<a href="http://twitter.com/jsantell">
+							@jsantell
+						</a>
+					</p>
+				</section>
+
+				<section>
+					<h1>Who is this guy</h1>
+					<img class="left" src="images/redpandalasers.gif"/>
+					<ul class="right">
+						<li style="font-weight:bold">Jordan Santell</li>
+						<li>Mozilla Engineer</li>
+						<li>Dev Tools</li>
+						<li>Github Addict</li>
+					</ul>
+				</section>
+				<section data-background="images/html5.jpg">
+				</section>
+				<section data-background="images/webstandards.jpg">
+				</section>
+				<section>
+					<h1>Open Web Apps</h1>
+					<p>Installable web apps with hardware access</p>
+				</section>
+
+				<section>
+					<h1>OWA Goals</h1>
+					<ul>
+						<li>Hardware Access</li>
+						<li>Installable</li>
+						<li>Offline Capable</li>
+						<li>Ecosystem portable</li>
+					</ul>
+				</section>
+				<section data-background="images/firefoxos-bg.png">
+				</section>
+
+				<section>
+					<h1>Architecture</h1>
+					<ul class="architecture">
+						<li class="gaia">Gaia</li>
+						<li class="gecko">Gecko</li>
+						<li class="gonk">Gonk</li>
+						<li class="device">Device</li>
+					</ul>
+				</section>
+				<section data-background="images/gaia.jpg">
+					<h1 style="color:#222">Gaia</h1>
+				</section>
+				<section>
+					<h1>Manifest</h1>
+					<pre style="font-size:80%">
+{
+    "version": "1.0.0",
+    "name": "Test App",
+    "launch_path": "index.html",
+    "description": "My Test App",
+    "icons": {
+        "16": "images/logo16.png",
+        "32": "images/logo32.png",
+        "128": "images/logo128.png"
+	},
+					<pre>
+				</section>
+				<section>
+					<h1>Manifest</h1>
+					<pre style="font-size:80%">
+    "installs_allowed_from": ["*"],
+    "default_locale": "en",
+    "permissions": {
+        "geolocation": {
+            "description" : "Get User Loc"
+        }
+    }
+}
+					</pre>
+				</section>
+				<section>
+					<h1>Web APIs</h1>
+					<ul class="left">
+						<li>Vibration</li>
+						<li>Orientation</li>
+						<li>Geolocation</li>
+						<li>Open Web Apps</li>
+						<li>Alarm</li>
+						<li>Web Activities</li>
+					</ul>
+					<ul class="right">
+						<li>Push Notifications</li>
+						<li>Web FM</li>
+						<li>WebPayment</li>
+						<li>IndexedDB</li>
+						<li>Ambient Light</li>
+						<li>Proximity</li>
+					</ul>
+				</section>
+				<section>
+					<h1>App Types</h1>
+					<p>Hosted Apps</p>
+					<p>Packaged Apps</p>
+				</section>
+				<section>
+					<h1>Permissions</h1>
+					<ul>
+						<li>Normal Apps</li>
+						<li>Privileged Apps</li>
+						<li>Certified Apps</li>
+					</ul>
+				</section>
+				<section data-background="images/appmanager.jpg">
+					<h1 style="color:#222">App Manager</h1>
+				</section>
+				<section data-background="images/firefoxossimulator.png">
+					<h1 style="color:#222">Simulator</h1>
+				</section>
+				<section data-background="images/buildingfirefoxos.jpg">
+				</section>
+				<section data-background="images/firefoxosdevices.png">
+					<h1 style="color:#222;background-color:#fff">The Future</h1>
+				</section>
+				<section data-background="images/firefoxos_swoop.jpg">
+					<h1>Thanks!</h1>
+					<ul>
+						<li>Jordan Santell</li>
+						<li><a href="http://twitter.com/jsantell">@jsantell</a></li>
+						<li><a href="http://jsantell.github.io/developing-firefox-os-apps">slides</a></li>
+						<li><a href="http://github.com/jsantell/developing-firefox-os-apps">source</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="vendor/scripts/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'fade'
+			});
+		</script>
+	</body>
+</html>
